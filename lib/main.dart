@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     home: Home(),
-    debugShowCheckedModeBanner: false,));
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
 class Home extends StatelessWidget {
+  const Home({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,14 +20,16 @@ class Home extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.only(top: 35.0, left: 20),
-          child: Column(
-            children: <Widget>[
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 35.0, left: 20),
+            child: Column(
+              children: <Widget>[
               Row(
                 children: <Widget>[
                   CircleAvatar(
-                    radius: 60, backgroundImage: AssetImage("images/sam.jfif"),
+                    radius: 60,
+                    backgroundImage: AssetImage("images/sam.jfif"),
                   ),
                   SizedBox(
                     width: 50,
@@ -34,11 +39,17 @@ class Home extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         "Samudra Kashyap",
-                        style: TextStyle(fontSize: 25,color: Colors.white, fontFamily: "Code"),
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontFamily: "Roboto"),
                       ),
                       Text(
-                        "Devloper",
-                        style: TextStyle(color: Colors.white,fontSize: 15, fontFamily: "Code"),
+                        "Developer",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontFamily: "Roboto"),
                       )
                     ],
                   )
@@ -55,7 +66,6 @@ class Home extends StatelessWidget {
                       children: <Widget>[
                         Icon(
                           Icons.school,
-
                           color: Colors.white,
                           size: 40,
                         ),
@@ -64,11 +74,16 @@ class Home extends StatelessWidget {
                         ),
                         Text(
                           "B.Tech in CSE",
-                          style: TextStyle(color: Colors.white,fontSize: 20, fontFamily: "Code"),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontFamily: "Roboto"),
                         )
                       ],
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Row(
                       children: <Widget>[
                         Icon(
@@ -80,12 +95,17 @@ class Home extends StatelessWidget {
                           width: 25,
                         ),
                         Text(
-                          "Fluuter, Flask",
-                          style: TextStyle(color: Colors.white,fontSize: 20, fontFamily: "Code"),
+                          "Flutter, Flask",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontFamily: "Roboto"),
                         )
                       ],
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Row(
                       children: <Widget>[
                         Icon(
@@ -98,11 +118,16 @@ class Home extends StatelessWidget {
                         ),
                         Text(
                           "GUWAHATI",
-                          style: TextStyle(color: Colors.white,fontSize: 20, fontFamily: "Code"),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontFamily: "Roboto"),
                         )
                       ],
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Row(
                       children: <Widget>[
                         Icon(
@@ -115,11 +140,16 @@ class Home extends StatelessWidget {
                         ),
                         Text(
                           "skashyap@gmail.com",
-                          style: TextStyle(color: Colors.white,fontSize: 20, fontFamily: "Code"),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontFamily: "Roboto"),
                         )
                       ],
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Row(
                       children: <Widget>[
                         Icon(
@@ -132,23 +162,37 @@ class Home extends StatelessWidget {
                         ),
                         Text(
                           "789617104",
-                          style: TextStyle(color: Colors.white,fontSize: 20, fontFamily: "Code"),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontFamily: "Roboto"),
                         )
                       ],
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 50,),
+              SizedBox(
+                height: 50,
+              ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Text("Debugging is like being the detective in a crime movie where you are also the murderer.",style: TextStyle(color: Colors.white,fontSize: 22, fontFamily: "Code"),),
+                child: Text(
+                  "Debugging is like being the detective in a crime movie where you are also the murderer.",
+                  style: TextStyle(
+                      color: Colors.white, fontSize: 22, fontFamily: "Roboto"),
+                ),
               ),
-              SizedBox(height: 200,),
-              Text("Created By Sam",style: TextStyle(color: Colors.white, fontFamily: "Code"),)
+              SizedBox(
+                height: 200,
+              ),
+              Text(
+                "Created By Sam",
+                style: TextStyle(color: Colors.white, fontFamily: "Roboto"),
+              )
             ],
           ),
-        ),
+        )),
       ),
     );
   }
